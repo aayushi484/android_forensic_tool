@@ -1,0 +1,80 @@
+# RED-FLAG keyword configuration for E-RAKSHAK 2026 forensic triage
+# Hindi/Gujarati/English mixed-script support
+# These keywords flag potential evidence of financial crimes, bribery, hawala
+
+keywords:
+  # Hindi (Devanagari script)
+  hindi:
+    - पैसा
+    - पैसे  
+    - भुगतान
+    - रिश्वत
+    - हवाला
+    - नकद
+    - लेनदेन
+    - ट्रांसफर
+    - खाता
+    - बैंक
+    - लाखों
+    - करोड़
+    - सौदा
+    - कमीशन
+    - दलाल
+    
+  # Gujarati script  
+  gujarati:
+    - પૈસા
+    - ચૂકવણી
+    - લાંચ
+    - હવાલા
+    - રોકડ
+    - ખાતું
+    - સોદો
+    
+  # English
+  english:
+    - payment
+    - bribe
+    - bribery
+    - hawala
+    - cash
+    - transfer
+    - amount
+    - account
+    - deal
+    - commission
+    - kickback
+    - laundering
+    - illegal
+    - drugs
+    - contraband
+    - weapon
+    - murder
+    - threat
+    - extortion
+    - ransom
+    - kidnap
+    
+  # Hindi/Gujarati transliterations (Latin script)
+  transliteration:
+    - paisa
+    - paise
+    - rishwat
+    - rishvat
+    - hawala
+    - hundi
+    - nakad
+    - nakdi
+    - bhugtan
+    - sauda
+    - dalal
+    - commission
+    - lakhon
+    - karod
+    - crore
+    - lakh
+
+# Fuzzy matching config
+fuzzy:
+  max_edit_distance: 2
+  min_word_length_for_fuzzy: 4

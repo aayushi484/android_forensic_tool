@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sakshya-recovery"
+version = "0.1.0"
+description = "Forensic evidence recovery for Android devices — real SQLite b-tree carving, WhatsApp decrypt, deleted-data recovery, and unified triage timeline."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "pycryptodome>=3.20",
+    "fastapi>=0.100",
+    "uvicorn>=0.20",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.1",
+    "black>=23.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sakshya_recovery"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
